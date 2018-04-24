@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9E92BE3B2088E28700C30617 /* AcmeEither.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E92BE312088E28700C30617 /* AcmeEither.framework */; };
-		9E92BE402088E28700C30617 /* AcmeEitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92BE3F2088E28700C30617 /* AcmeEitherTests.swift */; };
+		9E92BE402088E28700C30617 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92BE3F2088E28700C30617 /* EitherTests.swift */; };
 		9E92BE422088E28700C30617 /* AcmeEither.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E92BE342088E28700C30617 /* AcmeEither.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E92BE4C2088E29E00C30617 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92BE4B2088E29E00C30617 /* Either.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		9E92BE342088E28700C30617 /* AcmeEither.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcmeEither.h; sourceTree = "<group>"; };
 		9E92BE352088E28700C30617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E92BE3A2088E28700C30617 /* AcmeEitherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcmeEitherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E92BE3F2088E28700C30617 /* AcmeEitherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcmeEitherTests.swift; sourceTree = "<group>"; };
+		9E92BE3F2088E28700C30617 /* EitherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
 		9E92BE412088E28700C30617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E92BE4B2088E29E00C30617 /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				9E92BE342088E28700C30617 /* AcmeEither.h */,
 				9E92BE352088E28700C30617 /* Info.plist */,
+				9E92BE4B2088E29E00C30617 /* Either.swift */,
 			);
 			path = AcmeEither;
 			sourceTree = "<group>";
@@ -80,7 +83,7 @@
 		9E92BE3E2088E28700C30617 /* AcmeEitherTests */ = {
 			isa = PBXGroup;
 			children = (
-				9E92BE3F2088E28700C30617 /* AcmeEitherTests.swift */,
+				9E92BE3F2088E28700C30617 /* EitherTests.swift */,
 				9E92BE412088E28700C30617 /* Info.plist */,
 			);
 			path = AcmeEitherTests;
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					9E92BE302088E28700C30617 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					9E92BE392088E28700C30617 = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E92BE4C2088E29E00C30617 /* Either.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E92BE402088E28700C30617 /* AcmeEitherTests.swift in Sources */,
+				9E92BE402088E28700C30617 /* EitherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +339,7 @@
 		9E92BE462088E28700C30617 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rforshaw.AcmeEither;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +361,7 @@
 		9E92BE472088E28700C30617 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +382,7 @@
 		9E92BE492088E28700C30617 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AcmeEitherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +396,7 @@
 		9E92BE4A2088E28700C30617 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AcmeEitherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
